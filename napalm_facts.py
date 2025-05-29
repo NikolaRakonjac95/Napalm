@@ -1,4 +1,3 @@
-import json
 import getpass
 from napalm import get_network_driver
 from napalm.base.exceptions import ConnectAuthError
