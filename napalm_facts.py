@@ -20,8 +20,6 @@ for n in IP:
         device.open()
         output = device.get_facts()
         device.close()
-        output_2 = json.dumps(output, indent=4)
-        output_3 = json.loads(output_2)
         print (f"Model:{output_3['model']}, ip_address: {ip_address}, hostname: {output_3['hostname']}, os_version: {output_3['os_version'].split(',')[1]}" + "\n")
     except ConnectAuthError as authentication:
         print(f"Authentication error {ip_address}, {authentication}")
